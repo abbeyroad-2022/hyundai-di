@@ -38,6 +38,11 @@ const routes = {
     src: "src/html/include/*.html",
     dest: "build/",
   },
+  font: {
+    watch: "src/fonts/*",
+    src: "src/fonts/*",
+    dest: "build/fonts/",
+  },
 };
 
 async function reload() {
@@ -48,6 +53,11 @@ const clean = () => del(["build/", ".publish"]);
 
 const webserver = () =>
   gulp.src("build").pipe(ws({ livereload: true, open: true }));
+
+const font = () =>
+  gulp
+    .src(routes.font.src, { allowEmpty: true })
+    .pipe(gulp.dest(routes.font.dest));
 
 const img = () =>
   gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dest));
@@ -88,11 +98,12 @@ const gh = () => gulp.src("build/**/*").pipe(ghPages());
 const watch = () => {
   gulp.watch(routes.img.src, img);
   gulp.watch(routes.html.watch, inc);
+  gulp.watch(routes.font.watch, font);
   gulp.watch(routes.scss.watch, styles);
   gulp.watch(routes.js.watch, js);
 };
 
-const prepare = gulp.series([clean, img, inc]);
+const prepare = gulp.series([clean, img, inc, font]);
 
 const assets = gulp.series([styles, js]);
 

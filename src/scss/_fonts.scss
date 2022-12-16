@@ -1,0 +1,23 @@
+$font-name: "NotoSansCJKkr";
+$font-path: "../fonts/";
+
+$fonts: (
+  "Thin": 100,
+  "Light": 300,
+  "DemiLight": 300,
+  "Regular": 400,
+  "Medium": 500,
+  "Bold": 700,
+  "Black": 900,
+);
+
+/** =================== NotoSansCJKkr =================== **/
+@each $fonts, $size in $fonts {
+  @font-face {
+    font-family: #{$font-name};
+    font-weight: $size;
+    font-style: normal;
+    src: url("#{$font-path}#{$font-name}-#{$fonts}.woff2") format("woff2"),
+      url("#{$font-path}#{$font-name}-#{$fonts}.otf") format("opentype");
+  }
+}

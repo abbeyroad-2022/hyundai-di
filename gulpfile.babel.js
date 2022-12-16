@@ -100,4 +100,4 @@ const live = gulp.parallel([webserver, watch]);
 
 export const build = gulp.series([prepare, assets]);
 export const dev = gulp.series([build, live]);
-export const deploy = gulp.series([build, live, gh, clean]);
+export const deploy = gulp.series([build, gh, clean]);

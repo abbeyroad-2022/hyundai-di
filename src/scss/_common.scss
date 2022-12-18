@@ -1,5 +1,15 @@
+.fl {
+  display: flex;
+}
 .fl-center {
   justify-content: center;
+  align-items: center;
+}
+.fl-between {
+  justify-content: space-between;
+  align-items: center;
+}
+.fl-at {
   align-items: center;
 }
 .fl-column {
@@ -7,4 +17,75 @@
 }
 .fl-row {
   flex-direction: row;
+}
+.fl-top {
+  align-items: flex-start;
+}
+.mw952 {
+  min-width: 952px;
+}
+.mw1220 {
+  min-width: 1220px;
+}
+.mw1200 {
+  min-width: 1200px;
+}
+.mw1145 {
+  min-width: 1145px;
+}
+.mw1072 {
+  min-width: 1072px;
+}
+.mxw1200 {
+  max-width: 1200px;
+}
+.w1200 {
+  width: 1200px;
+}
+.w1020 {
+  width: 1020px;
+}
+.w1060 {
+  width: 1060px;
+}
+.w100 {
+  width: 100%;
+}
+.h100 {
+  height: 100%;
+}
+.mg-auto {
+  margin: 0 auto;
+}
+.pt48 {
+  padding-top: 48px;
+}
+.pt64 {
+  padding-top: 64px;
+}
+.pb50 {
+  padding-bottom: 50px;
+}
+.pb88 {
+  padding-bottom: 84px;
+}
+.mt64 {
+  margin-top: 64px;
+}
+.mb16 {
+  margin-bottom: 16px;
+}
+.re {
+  position: relative;
+}
+.bg-f9 {
+  background: #f9f9f9;
+}
+.bg-ff {
+  background: #fff;
+}
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: block;
 }

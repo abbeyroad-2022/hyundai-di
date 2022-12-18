@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+  <body>
+    <section class="contents">
+      @@include('./include/header.html')
+      <section class="sub-inner">
+        @@include('./include/subheader.html')
+        <div class="sub-contents fl fl-center bg-f4 mw1220">
+          <div class="page-list w1200 mg-auto mt64 pb88">
+            <img src="img/list6.png" alt="" class="list6" />
+            <img src="img/list7.png" alt="" class="list7" />
+            <div class="compare">
+              <div class="compare-inner h100">
+                <div class="mg-auto w1200 h100 re">
+                  <button class="compare-btn"></button>
+                  <div class="tit">
+                    <img src="img/list9.png" alt="" />
+                  </div>
+                  <div>
+                    <a href="equipment-detail.html">
+                      <img src="img/list10.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="mg-auto list8"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script>
+      let btn = document.querySelector('.compare-btn')
+      let list = document.querySelector('.compare')
+      let tit = document.querySelector('.tit')
+      let bt = false
+
+      btn.addEventListener('click', function (e) {
+        bt = !bt
+        if (bt) {
+          e.target.classList.add('on')
+          tit.style.paddingBottom = '20px'
+          list.style.height = '311px'
+        } else {
+          e.target.classList.remove('on')
+          tit.style.paddingBottom = '40px'
+          list.style.height = '100px'
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -6,7 +6,7 @@
 
 html,
 body {
-  min-width: 1100px;
+  min-width: 1250px;
   background-color: #fff;
 }
 
@@ -401,6 +401,7 @@ a {
   .list6 {
     position: relative;
     height: 150px;
+    max-width: 100%;
   }
   .list6 {
     position: relative;
@@ -409,7 +410,8 @@ a {
   }
   .list7 {
     position: relative;
-    left: -26px;
+    //left: -26px;
+    max-width: 100%;
   }
   .compare {
     position: fixed;
@@ -433,7 +435,7 @@ a {
     .compare-btn {
       position: absolute;
       top: 36px;
-      right: 0;
+      right: 50px;
       width: 32px;
       height: 32px;
       background: url('../img/btn-ico-arrow2.png') 50% no-repeat;
@@ -636,4 +638,10 @@ a {
   fill: #666;
   font-size: 0.5em;
   text-anchor: middle;
+}
+
+@media (max-width: 1500px) {
+  .page-list .compare .compare-inner {
+    padding-left: 20px !important;
+  }
 }

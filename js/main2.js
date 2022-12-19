@@ -37,7 +37,7 @@ const changeWidth = (num) => {
   //let left = (listWidth - w * Math.floor(listWidth / w)) / (listCount - 1);
   //console.log(listCount);
 
-  let wid = getWidth(mainInfo) - num;
+  let wid = getWidth(mainInfo) + num;
   let ct = Math.floor(wid / 492);
 
   console.log(wid);
@@ -103,11 +103,11 @@ headerBtn.addEventListener("click", function (e) {
       if (mainSlide.style.display === "none") {
         mainInfo.style.paddingLeft = "100px";
       } else {
-        mainInfo.style.paddingLeft = "560px";
-        mainSlide.style.left = "0";
+        mainInfo.style.paddingLeft = "710px";
+        mainSlide.style.left = "100px";
       }
     }
-    changeWidth(100);
+    changeWidth(0);
   } else {
     //header 열 때
     //headerWrap.style.overflow = "hidden";
@@ -120,10 +120,14 @@ headerBtn.addEventListener("click", function (e) {
     if (mainSlide == undefined) {
       mainInfo.style.paddingLeft = "300px";
     } else {
-      mainInfo.style.paddingLeft = "880px";
-      mainSlide.style.left = "241px";
+      if (mainSlide.style.display === "none") {
+        mainInfo.style.paddingLeft = "100px";
+      } else {
+        mainInfo.style.paddingLeft = "880px";
+        mainSlide.style.left = "241px";
+      }
     }
-    changeWidth(241);
+    changeWidth(-200);
   }
 });
 
@@ -134,19 +138,11 @@ slideBtn.addEventListener("click", function (e) {
     mainSlide.style.opacity = "0";
     mainSlide.style.display = "none";
     mainInfo.style.paddingLeft = "10px";
-    // wjs.forEach((i) => {
-    // 	i.classList.add("mg-auto")
-    // })
-    setTimeout(() => {
-      changeWidth();
-    }, 500);
   } else {
     //header on
     mainSlide.style.opacity = "0";
     mainSlide.style.display = "none";
     mainInfo.style.paddingLeft = "300px";
-    setTimeout(() => {
-      changeWidth();
-    }, 500);
   }
+  changeWidth(0);
 });

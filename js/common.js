@@ -40,7 +40,7 @@ headerBtn.addEventListener("click", function (e) {
     header.classList.add("act");
     subInner.style.paddingLeft = "100px";
     if (compareInner != undefined) {
-      compareInner.style.paddingLeft = "20px";
+      compareInner.style.paddingLeft = "100px";
     }
     checkSub();
   } else {

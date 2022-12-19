@@ -24,7 +24,7 @@ window.addEventListener("scroll", function () {
 
 let wjs = document.querySelectorAll(".wjs");
 
-const changeWidth = () => {
+const changeWidth = (num) => {
   let list = document.querySelector(".main-list");
   let listUl = document.querySelector(".main-list ul");
   let item = document.querySelectorAll(".main-list .sh");
@@ -37,8 +37,11 @@ const changeWidth = () => {
   //let left = (listWidth - w * Math.floor(listWidth / w)) / (listCount - 1);
   //console.log(listCount);
 
-  let wid = getWidth(mainInfo);
+  let wid = getWidth(mainInfo) - num;
   let ct = Math.floor(wid / 492);
+
+  console.log(wid);
+  console.log(ct);
 
   list.style.width = `${ct * 492}px`;
 
@@ -67,10 +70,10 @@ function getWidth(element) {
   return elementWidth;
 }
 
-changeWidth();
+changeWidth(0);
 
 window.addEventListener("resize", () => {
-  changeWidth();
+  changeWidth(0);
 });
 
 //header
@@ -94,23 +97,25 @@ headerBtn.addEventListener("click", function (e) {
     header.classList.add("act");
 
     if (mainSlide == undefined) {
-      mainInfo.style.paddingLeft = "20px";
+      mainInfo.style.paddingLeft = "100px";
     } else {
       //메인 슬라이드 유무 확인
       if (mainSlide.style.display === "none") {
-        mainInfo.style.paddingLeft = "20px";
+        mainInfo.style.paddingLeft = "100px";
       } else {
         mainInfo.style.paddingLeft = "560px";
         mainSlide.style.left = "0";
       }
     }
-    changeWidth();
+    changeWidth(100);
   } else {
     //header 열 때
+    //headerWrap.style.overflow = "hidden";
     e.target.classList.remove("on");
     headerWrap.style.width = "241px";
     header.style.width = "241px";
     header.classList.remove("act");
+    //headerWrap.style.overflow = "auto";
 
     if (mainSlide == undefined) {
       mainInfo.style.paddingLeft = "300px";
@@ -118,30 +123,30 @@ headerBtn.addEventListener("click", function (e) {
       mainInfo.style.paddingLeft = "880px";
       mainSlide.style.left = "241px";
     }
-    changeWidth();
+    changeWidth(241);
   }
 });
 
-slideBtn.addEventListener("click", function (e) {
-  console.log(header.offsetWidth);
-  //header off
-  if (header.offsetWidth == "1") {
-    mainSlide.style.opacity = "0";
-    mainSlide.style.display = "none";
-    mainInfo.style.paddingLeft = "10px";
-    // wjs.forEach((i) => {
-    // 	i.classList.add("mg-auto")
-    // })
-    setTimeout(() => {
-      changeWidth();
-    }, 500);
-  } else {
-    //header on
-    mainSlide.style.opacity = "0";
-    mainSlide.style.display = "none";
-    mainInfo.style.paddingLeft = "300px";
-    setTimeout(() => {
-      changeWidth();
-    }, 500);
-  }
-});
+// slideBtn.addEventListener("click", function (e) {
+//   console.log(header.offsetWidth);
+//   //header off
+//   if (header.offsetWidth == "1") {
+//     mainSlide.style.opacity = "0";
+//     mainSlide.style.display = "none";
+//     mainInfo.style.paddingLeft = "10px";
+//     // wjs.forEach((i) => {
+//     // 	i.classList.add("mg-auto")
+//     // })
+//     setTimeout(() => {
+//       changeWidth();
+//     }, 500);
+//   } else {
+//     //header on
+//     mainSlide.style.opacity = "0";
+//     mainSlide.style.display = "none";
+//     mainInfo.style.paddingLeft = "300px";
+//     setTimeout(() => {
+//       changeWidth();
+//     }, 500);
+//   }
+// });

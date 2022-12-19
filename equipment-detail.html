@@ -120,8 +120,8 @@
             </div>
             <div class="detail-scroll re">
               <div class="pr-img">
-                <img src="https://picsum.photos/380/380" alt="" />
-                <img src="https://picsum.photos/380/380" alt="" />
+                <img src="img/detail13.png" alt="" />
+                <img src="img/detail14.png" alt="" />
               </div>
               <div class="pr-tit fl fl-center fl-column pb50">
                 <div class="rl">
@@ -148,41 +148,41 @@
       </section>
     </section>
     <script>
-      let prImg = document.querySelector('.pr-img')
-      let titInfo = document.querySelector('.tit-info')
-      let tit = document.querySelectorAll('.tit')
-      window.addEventListener('scroll', function () {
-        let y = window.scrollY
+      let prImg = document.querySelector(".pr-img");
+      let titInfo = document.querySelector(".tit-info");
+      let tit = document.querySelectorAll(".tit");
+      window.addEventListener("scroll", function () {
+        let y = window.scrollY;
         if (y > 150) {
-          prImg.classList.add('ani')
-          titInfo.style.height = '0'
-          titInfo.classList.add('ani')
+          prImg.classList.add("ani");
+          titInfo.style.height = "0";
+          titInfo.classList.add("ani");
           tit.forEach(function (i) {
-            i.classList.add('ani')
-          })
+            i.classList.add("ani");
+          });
         } else {
-          prImg.classList.remove('ani')
-          titInfo.style.height = '293px'
-          titInfo.classList.remove('ani')
+          prImg.classList.remove("ani");
+          titInfo.style.height = "293px";
+          titInfo.classList.remove("ani");
           tit.forEach(function (i) {
-            i.classList.remove('ani')
-          })
+            i.classList.remove("ani");
+          });
         }
-      })
+      });
 
-      let btn = document.querySelector('.aco-btn')
-      let list = document.querySelector('.aco-list')
-      let bt = false
-      btn.addEventListener('click', function (e) {
-        bt = !bt
+      let btn = document.querySelector(".aco-btn");
+      let list = document.querySelector(".aco-list");
+      let bt = false;
+      btn.addEventListener("click", function (e) {
+        bt = !bt;
         if (bt) {
-          e.target.classList.add('on')
-          list.style.height = '500px'
+          e.target.classList.add("on");
+          list.style.height = "500px";
         } else {
-          e.target.classList.remove('on')
-          list.style.height = '0px'
+          e.target.classList.remove("on");
+          list.style.height = "0px";
         }
-      })
+      });
     </script>
   </body>
 </html>

@@ -515,7 +515,8 @@ a {
 
 .page-list .list7 {
   position: relative;
-  max-width: 100%; }
+  max-width: 100%;
+  transform: translateX(-25px); }
 
 .page-list .compare {
   position: fixed;

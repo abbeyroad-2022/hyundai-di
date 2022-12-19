@@ -107,7 +107,7 @@ headerBtn.addEventListener("click", function (e) {
         mainSlide.style.left = "0";
       }
     }
-    changeWidth(-100);
+    changeWidth(100);
   } else {
     //header 열 때
     //headerWrap.style.overflow = "hidden";
@@ -123,30 +123,30 @@ headerBtn.addEventListener("click", function (e) {
       mainInfo.style.paddingLeft = "880px";
       mainSlide.style.left = "241px";
     }
-    changeWidth(200);
+    changeWidth(241);
   }
 });
 
-// slideBtn.addEventListener("click", function (e) {
-//   console.log(header.offsetWidth);
-//   //header off
-//   if (header.offsetWidth == "1") {
-//     mainSlide.style.opacity = "0";
-//     mainSlide.style.display = "none";
-//     mainInfo.style.paddingLeft = "10px";
-//     // wjs.forEach((i) => {
-//     // 	i.classList.add("mg-auto")
-//     // })
-//     setTimeout(() => {
-//       changeWidth();
-//     }, 500);
-//   } else {
-//     //header on
-//     mainSlide.style.opacity = "0";
-//     mainSlide.style.display = "none";
-//     mainInfo.style.paddingLeft = "300px";
-//     setTimeout(() => {
-//       changeWidth();
-//     }, 500);
-//   }
-// });
+slideBtn.addEventListener("click", function (e) {
+  console.log(header.offsetWidth);
+  //header off
+  if (header.offsetWidth == "1") {
+    mainSlide.style.opacity = "0";
+    mainSlide.style.display = "none";
+    mainInfo.style.paddingLeft = "10px";
+    // wjs.forEach((i) => {
+    // 	i.classList.add("mg-auto")
+    // })
+    setTimeout(() => {
+      changeWidth();
+    }, 500);
+  } else {
+    //header on
+    mainSlide.style.opacity = "0";
+    mainSlide.style.display = "none";
+    mainInfo.style.paddingLeft = "300px";
+    setTimeout(() => {
+      changeWidth();
+    }, 500);
+  }
+});

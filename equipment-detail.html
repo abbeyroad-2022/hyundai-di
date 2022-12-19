@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/common.js" defer></script>
+  <title>현대두산인프라코어</title>
+</head>
+
+  <body>
+    <section class="contents">
+      <header class="header">
+  <div class="header-wrap">
+    <div class="header-inner fl-column">
+      <div class="profile fl-center fl-column">
+        <span class="profile-img">
+          <img src="https://picsum.photos/id/64/70/70" alt="김중공님" />
+        </span>
+        <span class="profile-txt">
+          <strong>김중공</strong>
+          님은
+          <br />
+          VIP회원입니다.
+        </span>
+      </div>
+      <nav>
+        <ul class="gnb fl-column">
+          <li class="on">
+            <a>
+              <i class="ico"></i>
+              모니터링
+            </a>
+            <div class="lnb"></div>
+          </li>
+          <li>
+            <a>
+              <i class="ico"></i>
+              장비정보
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="ico"></i>
+              가동정보
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="ico"></i>
+              보고서
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="ico"></i>
+              알림센터
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="ico"></i>
+              SERVICE
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="ico"></i>
+              커머스
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="ico"></i>
+              Admin
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="ico"></i>
+              Internal
+            </a>
+          </li>
+          <li>
+            <a>
+              <i class="ico"></i>
+              Sysadmin
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="loginout out">
+        <i class="ico"></i>
+        로그아웃
+      </a>
+      <button class="header-btn"></button>
+    </div>
+  </div>
+</header>
+
+      <section class="sub-inner">
+        <div class="sub-header">
+  <div class="mw1145 fl fl-between fl-at h100">
+    <h1>
+      <img
+        src="img/subheader-left.png"
+        alt="현대두산인프라코어"
+        style="height: 15px;"
+      />
+    </h1>
+    <img src="img/subheader-right.png" />
+  </div>
+</div>
+
+        <div class="sub-contents fl fl-center bg-f4">
+          <div class="page-detail w1200 mg-auto mt64 pb88">
+            <div class="mb16">
+              <img src="img/detail6.png" alt="" />
+            </div>
+            <div class="detail-scroll re">
+              <div class="pr-img">
+                <img src="https://picsum.photos/380/380" alt="" />
+                <img src="https://picsum.photos/380/380" alt="" />
+              </div>
+              <div class="pr-tit fl fl-center fl-column pb50">
+                <div class="rl">
+                  <span class="tit">
+                    <img src="img/detail9.png" alt="" />
+                  </span>
+                  <span class="tit">
+                    <img src="img/detail10.png" alt="" />
+                  </span>
+                  <div class="tit-info">
+                    <img src="img/detail7.png" alt="" class="w1020" />
+                  </div>
+                </div>
+                <div class="re">
+                  <img src="img/detail11.png" alt="" class="w1060" />
+                  <button class="aco-btn btntype1"></button>
+                  <div class="aco-list"></div>
+                </div>
+                <img src="img/detail12.png" alt="" class="w1060" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script>
+      let prImg = document.querySelector('.pr-img')
+      let titInfo = document.querySelector('.tit-info')
+      let tit = document.querySelectorAll('.tit')
+      window.addEventListener('scroll', function () {
+        let y = window.scrollY
+        if (y > 150) {
+          prImg.classList.add('ani')
+          titInfo.style.height = '0'
+          titInfo.classList.add('ani')
+          tit.forEach(function (i) {
+            i.classList.add('ani')
+          })
+        } else {
+          prImg.classList.remove('ani')
+          titInfo.style.height = '293px'
+          titInfo.classList.remove('ani')
+          tit.forEach(function (i) {
+            i.classList.remove('ani')
+          })
+        }
+      })
+
+      let btn = document.querySelector('.aco-btn')
+      let list = document.querySelector('.aco-list')
+      let bt = false
+      btn.addEventListener('click', function (e) {
+        bt = !bt
+        if (bt) {
+          e.target.classList.add('on')
+          list.style.height = '500px'
+        } else {
+          e.target.classList.remove('on')
+          list.style.height = '0px'
+        }
+      })
+    </script>
+  </body>
+</html>

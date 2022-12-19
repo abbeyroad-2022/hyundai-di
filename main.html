@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" style="background-color: #f9f9f9">
   <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
   />
   <link rel="stylesheet" href="./css/style.css" />
   <!--https://cdn.jsdelivr.net/npm/swiper@8.4.5/swiper.min.css-->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <script src="./js/main.js" defer></script>
   <title>현대두산인프라코어</title>
 </head>
 
-  <body>
+  <body style="background-color: none">
     <section class="contents">
       <header class="header">
   <div class="header-wrap">
@@ -26,7 +26,7 @@
           <img src="https://picsum.photos/id/64/70/70" alt="김중공님" />
         </span>
         <span class="profile-txt">
-          <strong>김중공</strong>
+          <strong>현중공</strong>
           님은
           <br />
           VIP회원입니다.
@@ -113,7 +113,7 @@
           <img
             src="img/main-slide-tit.png"
             alt="현대두산인프라코어"
-            style="height: 17px;"
+            style="height: 17px"
           />
         </h1>
         <!-- Swiper -->
@@ -123,35 +123,35 @@
               <img
                 src="img/main-slide1.png"
                 alt="현대두산인프라코어"
-                style="width: 554px;"
+                style="width: 554px"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/main-slide2.png"
+                alt="현대두산인프라코어"
+                style="width: 554px"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="img/main-slide1.png"
                 alt="현대두산인프라코어"
-                style="width: 554px;"
+                style="width: 554px"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/main-slide2.png"
+                alt="현대두산인프라코어"
+                style="width: 554px"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="img/main-slide1.png"
                 alt="현대두산인프라코어"
-                style="width: 554px;"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="img/main-slide1.png"
-                alt="현대두산인프라코어"
-                style="width: 554px;"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="img/main-slide1.png"
-                alt="현대두산인프라코어"
-                style="width: 554px;"
+                style="width: 554px"
               />
             </div>
           </div>
@@ -160,29 +160,28 @@
         </div>
         <div class="swiper-pagination"></div>
         <script>
-          var swiper = new Swiper('.mySwiper', {
+          var swiper = new Swiper(".mySwiper", {
             loop: true,
-            effect: 'fade',
+            effect: "fade",
             autoplay: {
               delay: 2500,
-              disableOnInteraction: false,
             },
             pagination: {
-              el: '.swiper-pagination',
+              el: ".swiper-pagination",
               dynamicBullets: true,
             },
             navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
             },
-          })
+          });
         </script>
       </section>
       <!-- main-info-->
       <section class="main-info">
         <div class="main-searchbar mw952 wjs mg-auto">
           <img src="img/search.png" alt="검색" />
-          <img src="img/icons.png" alt="아이콘 모음" style="height: 88px;" />
+          <img src="img/icons.png" alt="아이콘 모음" style="height: 88px" />
         </div>
         <!-- 그래프 추가, tab 추가-->
         <div class="main-tab mw952 wjs mg-auto">
@@ -191,7 +190,7 @@
           <ul>
             <li class="fl fl-between">
               <!-- svg 넣을 것 -->
-              <div class="flex-wrapper">
+              <div class="flex-wrapper reveal">
                 <div class="single-chart">
                   <svg viewBox="0 0 36 36" class="circular-chart orange">
                     <path
@@ -202,7 +201,7 @@
                     />
                     <path
                       class="circle"
-                      stroke-dasharray="30, 100"
+                      stroke-dasharray="50, 100"
                       d="M18 2.0845
 												a 15.9155 15.9155 0 0 1 0 31.831
 												a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -222,7 +221,7 @@
                     />
                     <path
                       class="circle"
-                      stroke-dasharray="60, 100"
+                      stroke-dasharray="75, 100"
                       d="M18 2.0845
 												a 15.9155 15.9155 0 0 1 0 31.831
 												a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -241,7 +240,7 @@
                     />
                     <path
                       class="circle"
-                      stroke-dasharray="90, 100"
+                      stroke-dasharray="0, 100"
                       d="M18 2.0845
 												a 15.9155 15.9155 0 0 1 0 31.831
 												a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -251,7 +250,7 @@
                 </div>
               </div>
               <!-- svg 막추가-->
-              <img src="img/main-item1.png" alt="" style="height: 240px;" />
+              <img src="img/main-item1.png" alt="" style="height: 240px" />
             </li>
             <li>
               <div class="tab-graph"></div>
@@ -259,38 +258,28 @@
           </ul>
         </div>
         <!-- 리스트-->
-        <div class="main-list mw952 mg-auto">
+        <div class="main-list mg-auto">
           <ul>
-            <li class="sh">
-              <img src="img/main-item2.png" alt="" style="width: 552px;" />
+            <li class="sh"></li>
+            <li class="sh"></li>
+            <li class="sh"></li>
+            <li class="sh bar reveal">
+              <span class="b"></span>
+              <span class="b"></span>
+              <span class="b"></span>
+              <span class="b"></span>
+              <span class="t">240,000</span>
             </li>
-            <li class="sh">
-              <img src="img/main-item3.png" alt="" style="width: 552px;" />
-            </li>
-            <li class="sh">
-              <img src="img/main-item4.png" alt="" style="width: 552px;" />
-            </li>
-            <li class="sh">
-              <img src="img/main-item5.png" alt="" style="width: 552px;" />
-            </li>
-            <li class="sh">
-              <img src="img/main-item6.png" alt="" style="width: 552px;" />
-            </li>
-            <li class="sh">
-              <img src="img/main-item7.png" alt="" style="width: 552px;" />
-            </li>
-            <li class="sh">
-              <img src="img/main-item8.png" alt="" style="width: 552px;" />
-            </li>
-            <li class="sh">
-              <img src="img/main-item9.png" alt="" style="width: 552px;" />
-            </li>
+            <li class="sh"></li>
+            <li class="sh"></li>
+            <li class="sh"></li>
+            <li class="sh"></li>
             <li class="sh long">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101242.90755078156!2d127.06259607132972!3d37.53524847562294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4d06f188969%3A0x3facbd4284178d15!2z7ZiE64yA7J247ZSE65287L2U7Ja0KOyjvCk!5e0!3m2!1sko!2skr!4v1671214030144!5m2!1sko!2skr"
                 width="100%"
                 height="380"
-                style="border: 0;"
+                style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"

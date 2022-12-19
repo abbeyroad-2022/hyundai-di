@@ -160,6 +160,15 @@ a {
   border-right: 1px solid #f4f4f4;
   transition: all 0.5s;
   z-index: 10; }
+  .header.act .header-inner nav ul li a,
+  .header.act .header-inner .loginout {
+    padding-left: 110px;
+    width: 100px;
+    overflow: hidden; }
+  .header.act .profile {
+    padding-right: 140px; }
+  .header.act .profile-txt {
+    visibility: hidden; }
   .header .header-btn {
     position: absolute;
     display: flex;
@@ -186,8 +195,7 @@ a {
 
 .header-wrap {
   width: 100%;
-  overflow: hidden;
-  transition: all 0.5s; }
+  transition: all 0.3s; }
 
 .header-inner {
   width: 241px;
@@ -195,12 +203,14 @@ a {
   overflow: hidden; }
   .header-inner .profile {
     display: flex;
-    padding: 48px 0 0; }
+    padding: 48px 0 0;
+    transition: all 0.3s; }
     .header-inner .profile .profile-img {
       width: 64px;
       height: 64px;
       overflow: hidden;
-      border-radius: 50%; }
+      border-radius: 50%;
+      transition: all 0.5s; }
     .header-inner .profile .profile-txt {
       margin-top: 24px;
       word-break: keep-all;
@@ -233,7 +243,8 @@ a {
           height: 32px;
           padding-left: 80px;
           line-height: 32px;
-          font-weight: 500; }
+          font-weight: 500;
+          transition: all 0.5s; }
           .header-inner nav ul li a .ico {
             position: absolute;
             top: 0;
@@ -268,7 +279,8 @@ a {
     height: 32px;
     margin-top: 132px;
     padding-left: 80px;
-    line-height: 32px; }
+    line-height: 32px;
+    transition: all 0.5s; }
     .header-inner .loginout .ico {
       position: absolute;
       top: 0;
@@ -412,6 +424,13 @@ a {
           background: url("../img/main-item9.png") 50% 44% no-repeat; }
         .main-info .main-list ul li:nth-child(9) {
           background: url("../img/main-item10.png") 50% 44% no-repeat; }
+        .main-info .main-list ul li span.t {
+          color: #666cdf;
+          font-size: 12px;
+          font-weight: 600;
+          position: absolute;
+          top: 130px;
+          left: 344px; }
         .main-info .main-list ul li.bar.active {
           position: relative; }
           .main-info .main-list ul li.bar.active span.b {
@@ -433,13 +452,6 @@ a {
               background-color: #00a9e8;
               left: 361px;
               animation: slideUp4 1s ease forwards; }
-          .main-info .main-list ul li.bar.active span.t {
-            color: #666cdf;
-            font-size: 12px;
-            font-weight: 600;
-            position: absolute;
-            top: 130px;
-            left: 344px; }
     .main-info .main-list iframe {
       width: 100% !important; }
 

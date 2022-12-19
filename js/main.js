@@ -89,8 +89,9 @@ headerBtn.addEventListener("click", function (e) {
   //header 닫을 때
   if (hbt) {
     e.target.classList.add("on");
-    headerWrap.style.width = "0";
-    header.style.width = "0";
+    headerWrap.style.width = "100px";
+    header.style.width = "100px";
+    header.classList.add("act");
 
     if (mainSlide == undefined) {
       mainInfo.style.paddingLeft = "20px";
@@ -109,6 +110,7 @@ headerBtn.addEventListener("click", function (e) {
     e.target.classList.remove("on");
     headerWrap.style.width = "241px";
     header.style.width = "241px";
+    header.classList.remove("act");
 
     if (mainSlide == undefined) {
       mainInfo.style.paddingLeft = "300px";

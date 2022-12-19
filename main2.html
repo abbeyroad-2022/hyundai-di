@@ -106,8 +106,79 @@
   </div>
 </header>
 
+      <!-- 슬라이드 추가 이미지 요청필요 -->
+      <section class="main-slide">
+        <button class="slide-btn"></button>
+        <h1>
+          <img
+            src="img/main-slide-tit.png"
+            alt="현대두산인프라코어"
+            style="height: 17px"
+          />
+        </h1>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="img/main-slide1.png"
+                alt="현대두산인프라코어"
+                style="width: 554px"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/main-slide2.png"
+                alt="현대두산인프라코어"
+                style="width: 554px"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/main-slide1.png"
+                alt="현대두산인프라코어"
+                style="width: 554px"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/main-slide2.png"
+                alt="현대두산인프라코어"
+                style="width: 554px"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/main-slide1.png"
+                alt="현대두산인프라코어"
+                style="width: 554px"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            effect: "fade",
+            autoplay: {
+              delay: 2500,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              dynamicBullets: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        </script>
+      </section>
       <!-- main-info-->
-      <section class="main-info" style="padding-left: 300px">
+      <section class="main-info">
         <div class="main-searchbar mw952 wjs mg-auto">
           <img src="img/search.png" alt="검색" />
           <img src="img/icons.png" alt="아이콘 모음" style="height: 88px" />

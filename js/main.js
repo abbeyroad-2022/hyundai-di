@@ -106,7 +106,7 @@ headerBtn.addEventListener("click", function (e) {
         mainSlide.style.left = "0";
       }
     }
-    changeWidth(240);
+    changeWidth(215);
   } else {
     //header 열 때
     //headerWrap.style.overflow = "hidden";

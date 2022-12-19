@@ -32,7 +32,7 @@ const changeWidth = (num) => {
   let mainInfo = document.querySelector(".main-info");
   let w = 492;
   //let listWidth =
-  //listUl.getBoundingClientRect().right - listUl.getBoundingClientRect().left;
+  listUl.getBoundingClientRect().right - listUl.getBoundingClientRect().left;
   //let listCount = Math.floor(listWidth / w);
   //let left = (listWidth - w * Math.floor(listWidth / w)) / (listCount - 1);
   //console.log(listCount);
@@ -41,6 +41,7 @@ const changeWidth = (num) => {
   let ct = Math.floor(wid / 492);
 
   console.log(wid);
+  console.log(ct);
 
   list.style.width = `${ct * 492}px`;
 
@@ -102,11 +103,11 @@ headerBtn.addEventListener("click", function (e) {
       if (mainSlide.style.display === "none") {
         mainInfo.style.paddingLeft = "100px";
       } else {
-        mainInfo.style.paddingLeft = "560px";
-        mainSlide.style.left = "0";
+        mainInfo.style.paddingLeft = "710px";
+        mainSlide.style.left = "100px";
       }
     }
-    changeWidth(215);
+    changeWidth(0);
   } else {
     //header 열 때
     //headerWrap.style.overflow = "hidden";
@@ -119,33 +120,29 @@ headerBtn.addEventListener("click", function (e) {
     if (mainSlide == undefined) {
       mainInfo.style.paddingLeft = "300px";
     } else {
-      mainInfo.style.paddingLeft = "880px";
-      mainSlide.style.left = "241px";
+      if (mainSlide.style.display === "none") {
+        mainInfo.style.paddingLeft = "100px";
+      } else {
+        mainInfo.style.paddingLeft = "880px";
+        mainSlide.style.left = "241px";
+      }
     }
     changeWidth(-200);
   }
 });
 
-// slideBtn.addEventListener("click", function (e) {
-//   console.log(header.offsetWidth);
-//   //header off
-//   if (header.offsetWidth == "1") {
-//     mainSlide.style.opacity = "0";
-//     mainSlide.style.display = "none";
-//     mainInfo.style.paddingLeft = "10px";
-//     // wjs.forEach((i) => {
-//     // 	i.classList.add("mg-auto")
-//     // })
-//     setTimeout(() => {
-//       changeWidth();
-//     }, 500);
-//   } else {
-//     //header on
-//     mainSlide.style.opacity = "0";
-//     mainSlide.style.display = "none";
-//     mainInfo.style.paddingLeft = "300px";
-//     setTimeout(() => {
-//       changeWidth();
-//     }, 500);
-//   }
-// });
+slideBtn.addEventListener("click", function (e) {
+  console.log(header.offsetWidth);
+  //header off
+  if (header.offsetWidth == "1") {
+    mainSlide.style.opacity = "0";
+    mainSlide.style.display = "none";
+    mainInfo.style.paddingLeft = "10px";
+  } else {
+    //header on
+    mainSlide.style.opacity = "0";
+    mainSlide.style.display = "none";
+    mainInfo.style.paddingLeft = "300px";
+  }
+  changeWidth(0);
+});

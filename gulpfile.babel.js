@@ -14,93 +14,93 @@ const sass = require("gulp-sass")(require("node-sass"));
 sass.compiler = require("node-sass");
 
 const routes = {
-	img: {
-		src: "src/img/*",
-		dest: "build/img",
-	},
-	html: {
-		watch: "src/html/**/*.html",
-		src: "src/html/*.html",
-		dest: "build/",
-	},
-	scss: {
-		watch: "src/scss/**/*.scss",
-		src: "src/scss/*.scss",
-		dest: "build/css",
-	},
-	js: {
-		watch: "src/js/**/*.js",
-		src: "src/js/*.js",
-		dest: "build/js",
-	},
-	include: {
-		watch: "src/html/include/*.html",
-		src: "src/html/include/*.html",
-		dest: "build/",
-	},
-	font: {
-		watch: "src/fonts/*",
-		src: "src/fonts/*",
-		dest: "build/fonts/",
-	},
+  img: {
+    src: "src/img/*",
+    dest: "build/img",
+  },
+  html: {
+    watch: "src/html/**/*.html",
+    src: "src/html/*.html",
+    dest: "build/",
+  },
+  scss: {
+    watch: "src/scss/**/*.scss",
+    src: "src/scss/*.scss",
+    dest: "build/css",
+  },
+  js: {
+    watch: "src/js/**/*.js",
+    src: "src/js/*.js",
+    dest: "build/js",
+  },
+  include: {
+    watch: "src/html/include/*.html",
+    src: "src/html/include/*.html",
+    dest: "build/",
+  },
+  font: {
+    watch: "src/fonts/*",
+    src: "src/fonts/*",
+    dest: "build/fonts/",
+  },
 };
 
 async function reload() {
-	server.reload();
+  server.reload();
 }
 
 const clean = () => del(["build/", ".publish"]);
 
 const webserver = () =>
-	gulp.src("build").pipe(ws({ livereload: true, open: true }));
+  gulp.src("build").pipe(ws({ livereload: true, open: true }));
 
 const font = () =>
-	gulp
-		.src(routes.font.src, { allowEmpty: true })
-		.pipe(gulp.dest(routes.font.dest));
+  gulp
+    .src(routes.font.src, { allowEmpty: true })
+    .pipe(gulp.dest(routes.font.dest));
 
 const img = () =>
-	gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dest));
+  gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dest));
 
 const styles = () =>
-	gulp
-		.src(routes.scss.src)
-		.pipe(sass().on("error", sass.logError))
-		.pipe(autoprefixer())
-		.pipe(gulp.dest(routes.scss.dest));
+  gulp
+    .src(routes.scss.src)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(routes.scss.dest));
 
 const js = () =>
-	gulp
-		.src(routes.js.src)
-		// .pipe(
-		//   bro({
-		//     transform: [
-		//       babelify.configure({ presets: ["@babel/preset-env"] }),
-		//       ["uglifyify", { global: true }],
-		//     ],
-		//   })
-		// )
-		.pipe(gulp.dest(routes.js.dest));
+  gulp
+    .src(routes.js.src)
+    // .pipe(
+    //   bro({
+    //     transform: [
+    //       babelify.configure({ presets: ["@babel/preset-env"] }),
+    //       ["uglifyify", { global: true }],
+    //     ],
+    //   })
+    // )
+    .pipe(gulp.dest(routes.js.dest));
 
 const inc = () =>
-	gulp
-		.src([routes.html.src, "!" + routes.include.src])
-		.pipe(
-			fileinclude({
-				prefix: "@@",
-				basepath: "@file",
-			})
-		)
-		.pipe(gulp.dest(routes.include.dest));
+  gulp
+    .src([routes.html.src, "!" + routes.include.src])
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
+    .pipe(gulp.dest(routes.include.dest));
 
 const gh = () => gulp.src("build/**/*").pipe(ghPages());
 
 const watch = () => {
-	gulp.watch(routes.img.src, img);
-	gulp.watch(routes.html.watch, inc);
-	gulp.watch(routes.font.watch, font);
-	gulp.watch(routes.scss.watch, styles);
-	gulp.watch(routes.js.watch, js);
+  gulp.watch(routes.img.src, img);
+  gulp.watch(routes.html.watch, inc);
+  gulp.watch(routes.font.watch, font);
+  gulp.watch(routes.scss.watch, styles);
+  gulp.watch(routes.js.watch, js);
 };
 
 const prepare = gulp.series([clean, img, inc, font]);

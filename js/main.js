@@ -32,16 +32,15 @@ const changeWidth = (num) => {
   let mainInfo = document.querySelector(".main-info");
   let w = 492;
   //let listWidth =
-  listUl.getBoundingClientRect().right - listUl.getBoundingClientRect().left;
+  //listUl.getBoundingClientRect().right - listUl.getBoundingClientRect().left;
   //let listCount = Math.floor(listWidth / w);
   //let left = (listWidth - w * Math.floor(listWidth / w)) / (listCount - 1);
   //console.log(listCount);
 
-  let wid = getWidth(mainInfo) - num;
+  let wid = getWidth(mainInfo) + num;
   let ct = Math.floor(wid / 492);
 
   console.log(wid);
-  console.log(ct);
 
   list.style.width = `${ct * 492}px`;
 
@@ -107,7 +106,7 @@ headerBtn.addEventListener("click", function (e) {
         mainSlide.style.left = "0";
       }
     }
-    changeWidth(-100);
+    changeWidth(240);
   } else {
     //header 열 때
     //headerWrap.style.overflow = "hidden";
@@ -123,7 +122,7 @@ headerBtn.addEventListener("click", function (e) {
       mainInfo.style.paddingLeft = "880px";
       mainSlide.style.left = "241px";
     }
-    changeWidth(200);
+    changeWidth(-200);
   }
 });
 

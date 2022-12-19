@@ -431,27 +431,27 @@ a {
           position: absolute;
           top: 130px;
           left: 344px; }
-        .main-info .main-list ul li.bar.active {
+        .main-info .main-list ul li.bar {
           position: relative; }
-          .main-info .main-list ul li.bar.active span.b {
-            background-color: #666cdf;
-            position: absolute;
-            width: 12px;
-            height: 180px;
-            left: 235px;
-            bottom: 70px;
-            animation: slideUp 1s ease forwards; }
-            .main-info .main-list ul li.bar.active span.b:nth-child(2) {
-              background-color: #00a9e8;
-              left: 252px;
-              animation: slideUp2 1s ease forwards; }
-            .main-info .main-list ul li.bar.active span.b:nth-child(3) {
-              left: 344px;
-              animation: slideUp3 1s ease forwards; }
-            .main-info .main-list ul li.bar.active span.b:nth-child(4) {
-              background-color: #00a9e8;
-              left: 361px;
-              animation: slideUp4 1s ease forwards; }
+        .main-info .main-list ul li.bar.active span.b {
+          background-color: #666cdf;
+          position: absolute;
+          width: 12px;
+          height: 180px;
+          left: 235px;
+          bottom: 70px;
+          animation: slideUp 1s ease forwards; }
+          .main-info .main-list ul li.bar.active span.b:nth-child(2) {
+            background-color: #00a9e8;
+            left: 252px;
+            animation: slideUp2 1s ease forwards; }
+          .main-info .main-list ul li.bar.active span.b:nth-child(3) {
+            left: 344px;
+            animation: slideUp3 1s ease forwards; }
+          .main-info .main-list ul li.bar.active span.b:nth-child(4) {
+            background-color: #00a9e8;
+            left: 361px;
+            animation: slideUp4 1s ease forwards; }
     .main-info .main-list iframe {
       width: 100% !important; }
 

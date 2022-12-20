@@ -109,7 +109,7 @@ table {
 
 /* 임시로 틀 잡기 */
 :root {
-  --swiper-theme-color: #222; }
+  --swiper-theme-color: #333; }
 
 html,
 body {
@@ -383,8 +383,8 @@ a {
       margin-right: 20px;
       padding-bottom: 5px; }
       .main-info .main-tab > span.on {
-        color: #222;
-        border-bottom: 2px solid #222; }
+        color: #333;
+        border-bottom: 2px solid #333; }
     .main-info .main-tab ul li .tab-contents {
       display: flex;
       align-items: flex-end;
@@ -392,8 +392,17 @@ a {
       .main-info .main-tab ul li .tab-contents img:nth-child(1) {
         margin-right: 63px; }
   .main-info .main-list {
-    margin-top: 62px;
+    position: relative;
+    margin-top: 108px;
     min-width: 985px; }
+    .main-info .main-list::before {
+      content: "대시보드 설정";
+      position: absolute;
+      top: -50px;
+      right: 16px;
+      font-size: 16px;
+      color: #333;
+      border-bottom: 1px solid #333; }
     .main-info .main-list ul {
       margin: 0 auto;
       display: flex;
@@ -652,7 +661,7 @@ a {
   position: relative;
   width: 524px;
   height: 196px;
-  background: url("../img/sample.png") left center/cover no-repeat; }
+  background: url("../img/sample.png") -20px center/cover no-repeat; }
 
 .single-chart {
   position: absolute;
@@ -660,13 +669,13 @@ a {
   height: 196px; }
   .single-chart:nth-child(1) {
     top: 0;
-    left: 20px; }
+    left: 0px; }
   .single-chart:nth-child(2) {
     top: 0;
-    left: 183px; }
+    left: 163px; }
   .single-chart:nth-child(3) {
     top: 0;
-    left: 354px; }
+    left: 334px; }
 
 .circular-chart {
   display: block;

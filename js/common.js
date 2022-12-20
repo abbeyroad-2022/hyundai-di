@@ -27,6 +27,7 @@ let headerBtn = document.querySelector(".header-btn");
 let header = document.querySelector(".header");
 let headerWrap = document.querySelector(".header-wrap");
 let subInner = document.querySelector(".sub-inner");
+let subHeader = document.querySelector(".sub-header");
 let compareInner = document.querySelector(".compare-inner");
 
 let hbt = false;
@@ -39,6 +40,7 @@ headerBtn.addEventListener("click", function (e) {
     header.style.width = "100px";
     header.classList.add("act");
     subInner.style.paddingLeft = "100px";
+    subHeader.style.left = "100px";
     if (compareInner != undefined) {
       compareInner.style.paddingLeft = "100px";
     }
@@ -49,6 +51,7 @@ headerBtn.addEventListener("click", function (e) {
     header.style.width = "241px";
     header.classList.remove("act");
     subInner.style.paddingLeft = "241px";
+    subHeader.style.left = "241px";
     if (compareInner != undefined) {
       compareInner.style.paddingLeft = "241px";
     }
@@ -57,12 +60,14 @@ headerBtn.addEventListener("click", function (e) {
 });
 
 function checkSub() {
-  if (header.offsetWidth < 10) {
-    html.style.minWidth = "1250px";
-    body.style.minWidth = "1250px";
+  if (header.offsetWidth < 110) {
+    console.log("header 닫힘")
+    //html.style.minWidth = "1250px";
+    //body.style.minWidth = "1250px";
   } else {
-    html.style.minWidth = "1550px";
-    body.style.minWidth = "1550px";
+    console.log("header 열림")
+    //html.style.minWidth = "1550px";
+    //body.style.minWidth = "1550px";
   }
 }
 checkSub();

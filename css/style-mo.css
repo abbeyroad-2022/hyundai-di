@@ -335,3 +335,6 @@ body {
   font-size: 0;
   text-indent: -9999px;
   cursor: pointer; }
+
+.slide {
+  overflow: hidden; }

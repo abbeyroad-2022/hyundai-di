@@ -189,6 +189,13 @@
   clickEvent.forEach((i)=>{
     //console.log(i)
     i.addEventListener("click",function(e){
+
+      
+      console.log(document.querySelector(".frame").scrollTop)
+        console.log(document.querySelector(".frame .inner").scrollTop)
+
+        document.querySelector(".frame .inner").scrollTo(0, 0);
+
       let page = e.currentTarget.getAttribute('date-page');
       let link = e.currentTarget.getAttribute('date-link');
 
@@ -217,7 +224,8 @@
           document.querySelector(`.${beforePage[beforePage.length-1]}`).style.display="block"
         }
         beforePage.pop();
-        frame.scrollTo(0);
+
+
       }
 
     })

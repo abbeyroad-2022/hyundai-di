@@ -30,9 +30,41 @@
       <div class="page equipment">
         <img src="../img/mo/equipment-all1.png" alt="">
         <div class="slide">
-          <div class="slide-in">
-            <img src="../img/mo/slide3.png" alt="" style="height: 310px;width: auto;">
+          <!-- Beginning of Slider -->
+          <div id="slider">
+            <!-- Sildes -->
+            <img id="one" src="../img/mo/equipment-slide1.png" alt="">
+            <img id="two" src="../img/mo/equipment-slide2.png" alt="">
+            
+            <!-- Navigation for the slides -->
+            <ul>
+              <li>
+                <a class="on">1</a>
+              </li>
+              <li>
+                <a >2</a>
+              </li>
+            </ul>
+
           </div>
+
+          <script>
+            document.querySelectorAll('#slider a').forEach(function(i,idx){
+              i.addEventListener('click', function (e) {
+                e.preventDefault();
+                console.log(idx+1)
+                document.querySelector(`#slider > img`).style.opacity = 0;
+                document.querySelector(`#slider ul li a`).classList.remove("on");
+                document.querySelector(`#slider > img:nth-child(${idx+1})`).style.opacity = 1;
+                document.querySelector(`#slider ul li a:nth-child(${idx+1})`).classList.add("on")
+              })
+            })
+            
+          </script>
+          <!-- End of Slider -->
+          <!-- <div class="slide-in">
+            <img src="../img/mo/slide3.png" alt="" style="height: 310px;width: auto;">
+          </div> -->
           <!-- <div class="slide"><img src="../img/mo/equipment-slide1.png" alt=""></div>
           <div class="slide"><img src="../img/mo/equipment-slide2.png" alt=""></div> -->
         </div>
@@ -123,6 +155,7 @@
         <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 0px;">이전페이지</span>
         <span class="click-a click-event" date-page ="part0" date-link ="part1" style="width: 300px;height: 59px;top: 830px;left: 16px;">부품구매 팝업</span>
         <span class="click-a click-event" date-page ="part0" date-link ="part2" style="width: 300px;height: 59px;bottom: 80px;left: 16px;">부품구매 </span>
+        <span class="click-a click-event" date-page ="part1" date-link ="part4" style="width: 220px;height: 100px;top: 728px;left: 36px;">부품구매 상세</span>
       </div>
       
       <!-- 파츠1 -->
@@ -130,7 +163,7 @@
         <img src="../img/mo/part2.png" alt="">
         <span class="click-a click-event" style="width: 30px; height: 30px; top: 83px; right: 10px;">이전페이지</span>
         <span class="click-a click-event" date-page ="part1" date-link ="part4" style="width: 220px;height: 30px;top: 360px;left: 16px;">부품구매 상세</span>
-        <span class="click-a click-event" date-page ="part1" date-link ="part5" style="width: 30px;height: 30px;top: 323px;left: 210px;">부품구매 팝업2</span>
+        <span class="click-a click-event" date-page ="part1" date-link ="part6" style="width: 30px;height: 30px;top: 323px;left: 210px;">부품구매 팝업2</span>
       </div>
       
       <!-- 파츠2 -->
@@ -156,6 +189,23 @@
       <!-- 파츠5 -->
       <div class="page part5">
         <img src="../img/mo/part6.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 10px;">이전페이지</span>
+        <!-- <span class="click-a click-event" date-page ="part2" date-link ="part3" style="width: 300px;height: 50px;bottom: 285px;left: 16px;">장바구니</span> -->
+      </div>
+
+
+      <!-- 파츠6 -->
+      <div class="page part6">
+        <img src="../img/mo/part7.png" alt="" style="padding-top: 1.5px;">
+        <span class="click-a click-event" style="width: 30px;height: 30px;top: 367px;left: 250px;">이전페이지</span>
+        <span class="click-a click-event" date-link ="part0" style="width: 30px;height: 30px;top: 86px;left: 290px;">이전페이지</span>
+        <!-- <span class="click-a click-event" date-page ="part2" date-link ="part3" style="width: 300px;height: 50px;bottom: 285px;left: 16px;">장바구니</span> -->
+      </div>
+
+
+      <!-- 파츠7 -->
+      <div class="page part7">
+        <img src="../img/mo/part8.png" alt="">
         <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 10px;">이전페이지</span>
         <!-- <span class="click-a click-event" date-page ="part2" date-link ="part3" style="width: 300px;height: 50px;bottom: 285px;left: 16px;">장바구니</span> -->
       </div>

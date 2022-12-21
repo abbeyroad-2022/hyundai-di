@@ -253,7 +253,7 @@
             <source src="../img/mo/video.mp4" type="video/mp4">
           </video>
         </div>
-        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 10px;">이전페이지</span>
+        <span class="click-a click-event nav-on" style="width: 30px; height: 30px; top: 25px; left: 10px; z-index:999;">이전페이지</span>
       </div>
 
     </div>
@@ -343,10 +343,18 @@
   })
 
   let videoOn = document.querySelector(".video-on");
+  let navOn = document.querySelector(".nav-on");
   let video = document.querySelector("video");
 
   videoOn.addEventListener("click", function(){
     video.play();
+    nav.style.display="none";
+  })
+  navOn.addEventListener("click", function(){
+    //video.stop();
+    video.pause();
+    video.currentTime = 0;
+    nav.style.display="block";
   })
 
 

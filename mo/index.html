@@ -242,12 +242,17 @@
       <div class="page setting">
         <img src="../img/mo/setting.png" alt="">
         <span class="click-a click-event"  style="width: 30px; height: 30px; top: 25px; right: 10px;">이전페이지</span>
-        <span class="click-a click-event" date-page ="setting" date-link ="setting2" style="width: 140px;height: 150px;top: 60px;left: 16px;">세팅2</span>
+        <span class="click-a click-event video-on" date-page ="setting" date-link ="setting2" style="width: 140px;height: 150px;top: 60px;left: 16px;">세팅2</span>
       </div>
 
       <!-- 세팅2 -->
       <div class="page setting2">
-        <img src="../img/mo/setting2.png" alt="">
+        <!-- <img src="../img/mo/setting2.png" alt=""> -->
+        <div class="video">
+          <video muted >
+            <source src="../img/mo/video.mp4" type="video/mp4">
+          </video>
+        </div>
         <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 10px;">이전페이지</span>
       </div>
 
@@ -336,5 +341,15 @@
 
     })
   })
+
+  let videoOn = document.querySelector(".video-on");
+  let video = document.querySelector("video");
+
+  videoOn.addEventListener("click", function(){
+    video.play();
+  })
+
+
+
 </script>
 </html>

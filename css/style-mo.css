@@ -339,25 +339,21 @@ body {
 #slider {
   max-width: 640px;
   height: 307px;
+  overflow: hidden;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  transition: all ease .5s; }
 
 #slider img {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
-  width: 100%; }
+  width: 100%;
+  transition: all 1s ease-in-out; }
 
-#slider img:target {
-  opacity: 1;
-  transition: all .5s ease-in-out; }
-
-#slider img#five {
+#slider img#one {
   opacity: 1; }
-
-#slider img:not(:target), #slider img:target ~ img#five {
-  opacity: 0; }
 
 /* Navigation */
 #slider ul {
@@ -384,22 +380,3 @@ body {
 
 #slider ul li a.on {
   background-color: #777; }
-
-#slider ul li a[href="#five"] {
-  /* by default set five to be selected */
-  background: #777; }
-
-#one:target ~ ul li a[href="#one"],
-#two:target ~ ul li a[href="#two"],
-#three:target ~ ul li a[href="#three"],
-#four:target ~ ul li a[href="#four"],
-#five:target ~ ul li a[href="#five"] {
-  /*when #id is the target set the link to change to selected color*/
-  background: #777; }
-
-#one:target ~ ul li a[href="#five"],
-#two:target ~ ul li a[href="#five"],
-#three:target ~ ul li a[href="#five"],
-#four:target ~ ul li a[href="#five"] {
-  /*set default selected color of five to change to unselected when any other slide is the target  */
-  background: #ccc; }

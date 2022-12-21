@@ -31,13 +31,13 @@
         <img src="../img/mo/equipment-all1.png" alt="">
         <div class="slide">
           <!-- Beginning of Slider -->
-          <div id="slider">
+          <div id="slider" style="height: 0;">
             <!-- Sildes -->
             <img id="one" src="../img/mo/equipment-slide1.png" alt="">
             <img id="two" src="../img/mo/equipment-slide2.png" alt="">
             
             <!-- Navigation for the slides -->
-            <ul>
+            <ul class="pager">
               <li>
                 <a class="on">1</a>
               </li>
@@ -48,19 +48,6 @@
 
           </div>
 
-          <script>
-            document.querySelectorAll('#slider a').forEach(function(i,idx){
-              i.addEventListener('click', function (e) {
-                e.preventDefault();
-                console.log(idx+1)
-                document.querySelector(`#slider > img`).style.opacity = 0;
-                document.querySelector(`#slider ul li a`).classList.remove("on");
-                document.querySelector(`#slider > img:nth-child(${idx+1})`).style.opacity = 1;
-                document.querySelector(`#slider ul li a:nth-child(${idx+1})`).classList.add("on")
-              })
-            })
-            
-          </script>
           <!-- End of Slider -->
           <!-- <div class="slide-in">
             <img src="../img/mo/slide3.png" alt="" style="height: 310px;width: auto;">
@@ -70,7 +57,34 @@
         </div>
         <img src="../img/mo/equipment-all2.png" alt="">
         <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 0px;">이전페이지</span>
-        <span class="click-a" style="width: 254px;height: 70px;top: 157px;left: 0px;">슬라이드 오픈</span>
+        <span class="click-a click-event" date-page ="equipment" date-link ="part7" style="width: 30px;height: 30px;top: 185px;left: 300px;">상세페이지2</span>
+        <span class="click-a slide-open" style="width: 304px;height: 70px;top: 157px;left: 0px;">슬라이드 오픈</span>
+       
+        <script>
+          let slider = document.querySelector("#slider");
+          let slide = document.querySelectorAll("#slider > img");
+          let pager = document.querySelectorAll(".pager  a");
+          let slideOpen = document.querySelector(".slide-open");
+          
+          pager.forEach(function(i,idx){
+            i.addEventListener('click', function (e) {
+              pager.forEach(function(i){
+                i.classList.remove("on")
+              })
+              slide.forEach(function(i){
+                i.style.opacity = 0;
+              })
+              e.target.classList.add("on")
+              slide[idx].style.opacity = 1;
+            })
+          })
+          
+
+          slideOpen.addEventListener("click",()=>{
+            slider.style.height="307px"
+          })
+        </script>
+       
         <!-- Swiper
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">

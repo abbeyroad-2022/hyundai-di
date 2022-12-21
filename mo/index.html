@@ -8,14 +8,162 @@
   <title>Document</title>
 </head>
 <body class="fl fl-center">
-  <div class="frame scrollbar" id="style-1">
-    <img src="https://picsum.photos/500/1500" alt="">
+  <div class="frame" >
+    <div class="inner scrollbar" id="style-1">
+      <!-- 로그인 -->
+      <div class="page login">
+        <span class="click-event " date-page ="login" date-link ="main">
+          <img src="../img/mo/mo-login.png" alt="">
+        </span>
+      </div>
+
+      <!-- 메인 -->
+      <div class="page main">
+          <img src="../img/mo/mo-main.png" alt="">
+          <span class="click-a click-event" date-page ="main" date-link ="equipment" style="width: 30px; height: 30px; top: 20px; right: 97px;">전체장비</span>
+          <span class="click-a click-event" date-page ="main" date-link ="mypage0" style="width: 30px; height: 30px; top: 20px; right: 20px;">마이페이지</span>
+          <span class="click-a click-event" date-page ="main" date-link ="part0" style="width: 265px;height: 120px;top: 460px;left: 30px;">교체필요 부품구매</span>
+      </div>
+      
+
+      <!-- 전체 장비 -->
+      <div class="page equipment">
+        <img src="../img/mo/equipment-all1.png" alt="">
+        <img src="../img/mo/equipment-all2.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 0px;">이전페이지</span>
+        <span class="click-a" style="width: 254px;height: 70px;top: 157px;left: 0px;">슬라이드 오픈</span>
+        <div class="slide">
+          <div class="slide"><img src="../img/mo/equipment-slide1.png" alt=""></div>
+          <div class="slide"><img src="../img/mo/equipment-slide2.png" alt=""></div>
+        </div>
+
+        <span class="click-a click-event" date-page ="equipment" date-link ="filter" style="width: 30px; height: 30px; top: 20px; right: 11px;">전체장비</span>
+        <!-- <span class="click-a click-event" date-page ="main" date-link ="equipment" style="width: 30px; height: 30px; top: 20px; right: 97px;">전체장비</span>
+        <span class="click-a click-event" date-page ="main" date-link ="mypage" style="width: 30px; height: 30px; top: 20px; right: 20px;">마이페이지</span>
+        <span class="click-a click-event" date-page ="main" date-link ="part" style="width: 265px;height: 120px;top: 460px;left: 30px;">교체필요 부품구매</span> -->
+      </div>
+
+      <!-- 필터 -->
+      <div class="page filter">
+        <img src="../img/mo/filter.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; right: 10px;">이전페이지</span>
+      </div>
+
+      <!-- 마이페이지0 -->
+      <div class="page mypage0">
+        <img src="../img/mo/mypage0.png" alt="">
+        <span class="click-a click-event" date-page ="mypage0" date-link ="mypage1" style="width: 300px;height: 140px;top: 240px;left: 16px;">구독중인 서비스</span>
+      </div>
+
+      <!-- 마이페이지1 -->
+      <div class="page mypage1">
+        <img src="../img/mo/mypage.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 0px;">이전페이지</span>
+        <span class="click-a click-event" date-page ="mypage1" date-link ="mypage5" style="width: 300px;height: 300px;top: 90px;left: 16px;">구독 달력</span>
+        <span class="click-a click-event" date-page ="mypage1" date-link ="mypage3" style="width: 300px;height: 130px;top: 400px;right: 20px;">내 구독 서비스</span>
+        <span class="click-a click-event" date-page ="mypage1" date-link ="mypage4" style="width: 265px;height: 91px;top: 550px;left: 30px;">구독 서비스 관리</span>
+      </div>
+      
+      <!-- 마이페이지2 -->
+      <div class="page mypage2">
+        <img src="../img/mo/mypage2.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; right: 10px;">이전페이지</span>
+      </div>
+      
+      <!-- 마이페이지3 -->
+      <div class="page mypage3">
+        <img src="../img/mo/mypage3.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 0px;">이전페이지</span>
+      </div>
+
+      <!-- 마이페이지4 -->
+      <div class="page mypage4">
+        <img src="../img/mo/mypage4.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 0px;">이전페이지</span>
+        <span class="click-a click-event" date-page ="mypage4" date-link ="mypage2" style="width: 300px;height: 90px;top: 240px;left: 16px;">구독 달력</span>
+      </div>
+
+      <!-- 마이페이지5 -->
+      <div class="page mypage5">
+        <img src="../img/mo/mypage5.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; right: 10px;">이전페이지</span>
+      </div>
+      
+      
+
+      <!-- 파츠0 -->
+      <div class="page part0">
+        <img src="../img/mo/part1.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 0px;">이전페이지</span>
+        <span class="click-a click-event" date-page ="part0" date-link ="part1" style="width: 300px;height: 59px;top: 270px;left: 16px;">부품구매 팝업</span>
+      </div>
+      
+      <!-- 파츠1 -->
+      <div class="page part1">
+        <img src="../img/mo/part2.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 83px; right: 10px;">이전페이지</span>
+        <span class="click-a click-event" date-page ="part1" date-link ="part4" style="width: 220px;height: 90px;top: 290px;left: 16px;">부품구매 상세</span>
+        <span class="click-a click-event" date-page ="part1" date-link ="part2" style="width: 80px;height: 90px;top: 293px;right: 16px;">부품구매 주문서</span>
+      </div>
+      
+      <!-- 파츠2 -->
+      <div class="page part2">
+        <img src="../img/mo/part3.png" alt="" style="padding-bottom: 40px;">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 0px;">이전페이지</span>
+        <span class="click-a click-event" date-page ="part2" date-link ="part3" style="width: 300px;height: 50px;bottom: 90px;left: 16px;">부품구매 결제</span>
+      </div>
+
+      <!-- 파츠3 -->
+      <div class="page part3">
+        <img src="../img/mo/part4.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 0px;">이전페이지</span>
+        <span class="click-a click-event" date-page ="part3" date-link ="mypage2" style="width: 300px;height: 90px;top: 240px;left: 16px;">구독 달력</span>
+      </div>
+
+      <!-- 파츠4 -->
+      <div class="page part4">
+        <img src="../img/mo/part5.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 10px;">이전페이지</span>
+      </div>
+
+      <!-- 메뉴 -->
+      <div class="page menu">
+        <img src="../img/mo/menu.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; right: 10px;">이전페이지</span>
+      </div>
+
+      <!-- 세팅 -->
+      <div class="page setting">
+        <img src="../img/mo/setting.png" alt="">
+        <span class="click-a click-event"  style="width: 30px; height: 30px; top: 25px; right: 10px;">이전페이지</span>
+        <span class="click-a click-event" date-page ="setting" date-link ="setting2" style="width: 140px;height: 150px;top: 60px;left: 16px;">세팅2</span>
+      </div>
+
+      <!-- 세팅2 -->
+      <div class="page setting2">
+        <img src="../img/mo/setting2.png" alt="">
+        <span class="click-a click-event" style="width: 30px; height: 30px; top: 25px; left: 10px;">이전페이지</span>
+      </div>
+
+    </div>
+    <!-- 고정 메뉴 -->
+    <div class="nav">
+      <div class="inner">
+        <img src="../img/mo/mo-nav.png" alt="">
+        <span class="click-a click-event" date-link ="setting" style="width: 50px;height: 50px;top: 0;left: 142px;">세팅</span>
+        <span class="click-a click-event" date-link ="main" style="width: 50px;height: 50px;top: 30px;left: 16px;">메인</span>
+        <span class="click-a click-event" date-link ="menu" style="width: 50px;height: 50px;top: 30px;right: 16px;">메뉴</span>
+      </div>
+    </div>
   </div>
+  <!-- 아이폰 -->
   <div class="iphone-x">
-    <i>Speaker</i>
-    <b>Camera</b>
-    <!-- <span>Left action button</span>
-    <span>Right action button</span> -->
+    <div class="iphone-inner">
+      <!-- <i>Speaker</i>
+      <b>Camera</b> -->
+      <!-- <span>Left action button</span>
+      <span>Right action button</span> -->
+    </div>
   </div>
 </body>
 <script>
@@ -30,5 +178,49 @@
       behavior: 'smooth'
     });
   });
+</script>
+
+<script>
+  let clickEvent = document.querySelectorAll(".click-event");
+  let pages = document.querySelectorAll(".page");
+  let nav = document.querySelector(".nav");
+  let beforePage = [];
+
+  clickEvent.forEach((i)=>{
+    //console.log(i)
+    i.addEventListener("click",function(e){
+      let page = e.currentTarget.getAttribute('date-page');
+      let link = e.currentTarget.getAttribute('date-link');
+
+      if(beforePage[beforePage.length-1] != page && page != null){
+        beforePage.push(page)
+      }
+
+      if(link != null) {
+        if(page == "login") {nav.style.display="block"}
+        pages.forEach((i)=>{
+          i.style.display="none"
+        })
+        console.log(link)
+        //e.currentTarget.style.display="none"
+        document.querySelector(`.${link}`).style.display="block"
+      } else {
+        pages.forEach((i)=>{
+          i.style.display="none"
+        })
+
+        console.log(beforePage)
+
+        if(beforePage[beforePage.length-1] == "login" || beforePage[beforePage.length-1] == null) {
+          document.querySelector(`.main`).style.display="block"
+        } else {
+          document.querySelector(`.${beforePage[beforePage.length-1]}`).style.display="block"
+        }
+        beforePage.pop();
+        frame.scrollTo(0);
+      }
+
+    })
+  })
 </script>
 </html>

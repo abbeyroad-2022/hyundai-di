@@ -170,6 +170,10 @@ a {
     padding-right: 140px; }
   .header.act .profile-txt {
     visibility: hidden; }
+  .header.act .header-inner nav ul li:hover .lnb {
+    right: -25px;
+    display: block;
+    z-index: 9999; }
   .header .header-btn {
     position: absolute;
     display: flex;
@@ -200,8 +204,7 @@ a {
 
 .header-inner {
   width: 241px;
-  min-height: 100vh;
-  overflow: hidden; }
+  min-height: 100vh; }
   .header-inner .profile {
     display: flex;
     padding: 48px 0 0;
@@ -224,8 +227,31 @@ a {
       display: flex;
       justify-content: space-between; }
       .header-inner nav ul li {
+        position: relative;
         margin-bottom: 32px;
-        font-size: 16px; }
+        font-size: 16px;
+        /* lnb 추가 */ }
+        .header-inner nav ul li .lnb {
+          display: none;
+          position: absolute;
+          top: -10px;
+          right: -167px;
+          border: 1px solid #ebebeb;
+          box-shadow: 5px 5px 15px #ebebeb; }
+          .header-inner nav ul li .lnb::before {
+            content: '';
+            height: 12px;
+            width: 12px;
+            position: absolute;
+            background-color: #f2f5f6;
+            top: 19px;
+            left: -4px;
+            border-top: #ebebeb solid 1px;
+            border-left: #ebebeb solid 1px;
+            transform: rotate(-45deg) skew(20deg, 20deg); }
+        .header-inner nav ul li:hover .lnb {
+          display: block;
+          z-index: 9999; }
         .header-inner nav ul li.on {
           color: #f68b1f; }
           .header-inner nav ul li.on a::after {

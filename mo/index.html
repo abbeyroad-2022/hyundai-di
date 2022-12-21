@@ -4,17 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="../css/style-mo.css" />
   <title>Document</title>
 </head>
-<body>
+<body class="fl fl-center">
+  <div class="frame scrollbar" id="style-1">
+    <img src="https://picsum.photos/500/1500" alt="">
+  </div>
   <div class="iphone-x">
     <i>Speaker</i>
     <b>Camera</b>
-    <s>10:24</s>
-    
-    <span>Left action button</span>
-    <span>Right action button</span>
+    <!-- <span>Left action button</span>
+    <span>Right action button</span> -->
   </div>
 </body>
+<script>
+  let iphone = document.querySelector(".iphone-x");
+  let frame = document.querySelector(".frame");
+  iphone.addEventListener("wheel", (e) => {
+    console.log(e.deltaY)
+    let y1 = frame.scrollTop;
+    let y2 = e.deltaY;
+    frame.scrollTo({
+      top: y1+y2,
+      behavior: 'smooth'
+    });
+  });
+</script>
 </html>

@@ -8,6 +8,8 @@ import bro from "gulp-bro";
 import babelify from "babelify";
 import ghPages from "gulp-gh-pages";
 import fileinclude from "gulp-file-include";
+//import imagemin from "gulp-imagemin";
+import newer from "gulp-newer";
 
 const sass = require("gulp-sass")(require("node-sass"));
 
@@ -15,12 +17,12 @@ sass.compiler = require("node-sass");
 
 const routes = {
   img: {
-    src: "src/img/*",
+    src: "src/img/**/*",
     dest: "build/img",
   },
   html: {
     watch: "src/html/**/*.html",
-    src: "src/html/*.html",
+    src: "src/html/**/*.html",
     dest: "build/",
   },
   scss: {
@@ -60,7 +62,10 @@ const font = () =>
     .pipe(gulp.dest(routes.font.dest));
 
 const img = () =>
-  gulp.src(routes.img.src).pipe(image()).pipe(gulp.dest(routes.img.dest));
+  gulp.src(routes.img.src)
+  .pipe(newer(routes.img.dest))
+  .pipe(image())
+  .pipe(gulp.dest(routes.img.dest));
 
 const styles = () =>
   gulp
